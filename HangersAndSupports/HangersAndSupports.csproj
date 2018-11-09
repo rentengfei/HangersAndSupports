@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4D9BC3B-7B92-412E-BA82-6EFB953482C7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HangersAndSupports</RootNamespace>
+    <AssemblyName>HangersAndSupports</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aveva.ApplicationFramework">
+      <HintPath>..\..\..\..\..\..\AVEVA\Plant\PDMS12.1.SP4\Aveva.ApplicationFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Aveva.ApplicationFramework.Presentation">
+      <HintPath>..\..\..\..\..\..\AVEVA\Plant\PDMS12.1.SP4\Aveva.ApplicationFramework.Presentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Aveva.Pdms.Database">
+      <HintPath>..\..\..\..\..\..\AVEVA\Plant\PDMS12.1.SP4\Aveva.Pdms.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Aveva.Pdms.Graphics, Version=12.1.0.0, Culture=neutral, PublicKeyToken=17c64733a9775004, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\AVEVA\Plant\PDMS12.1.SP4\Aveva.Pdms.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="Aveva.Pdms.Shared">
+      <HintPath>..\..\..\..\..\..\AVEVA\Plant\PDMS12.1.SP4\Aveva.Pdms.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="PDMSFilters">
+      <HintPath>..\..\..\..\..\..\AVEVA\Plant\PDMS12.1.SP4\PDMSFilters.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HSAddin.cs" />
+    <Compile Include="HSCommand.cs" />
+    <Compile Include="HSDal.cs" />
+    <Compile Include="HSData\CTypeModel.cs" />
+    <Compile Include="HSData\ElementModel.cs" />
+    <Compile Include="HSData\GroupModel.cs" />
+    <Compile Include="HSData\HSDal.cs" />
+    <Compile Include="HSData\HSModel.cs" />
+    <Compile Include="HSData\NameNodeModel.cs" />
+    <Compile Include="HSData\NameRefModel.cs" />
+    <Compile Include="HSData\StandardModel.cs" />
+    <Compile Include="HSData\TypeModel.cs" />
+    <Compile Include="HSForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HSForm.Designer.cs">
+      <DependentUpon>HSForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HSModel.cs" />
+    <Compile Include="NameNode.cs" />
+    <Compile Include="NameRef.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HSForm.resx">
+      <DependentUpon>HSForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HS.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

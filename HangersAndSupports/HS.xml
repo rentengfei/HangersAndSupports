@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE standards [
+  <!ATTLIST element id ID #REQUIRED >
+]>
+<standards>
+  <standard  name="化工部支吊架标准" description="">
+    <types>
+      <type name="A类" description="管件标准零部件">
+        <ctype name="A5" description="吊环型吊杆" imgurl="">
+        <HS name="A5-3" isgroup="false" description="吊环型吊杆" id="9" imgurl="">
+          <Current>
+            <element name="20" id="1" >
+            </element>
+            <element name="30" id="2" >
+            </element>
+            <element name="40" id="3" >
+            </element>
+          </Current>
+        </HS>
+        <HS name="A5-4" isgroup="false" id="10">
+          <Current>
+            <element name="20" id="4" >
+            </element>
+            <element name="30" id="5" >
+            </element>
+            <element name="40" id="6" >
+            </element>
+          </Current>
+        </HS>
+        </ctype>
+        <ctype name="Ax" description="吊环型吊杆1">
+          <HS name="A5-5" isgroup="true" id="11">
+            <Current>
+              <element name="20" id="7" >
+              </element>
+              <element name="30" id="8" >
+              </element>
+              <element name="40" id="9" >
+              </element>
+            </Current>
+            <group>
+              <ref>1</ref>
+              <ref>2</ref>
+              <ref>3</ref>
+            </group>
+          </HS>
+        </ctype>
+      </type>
+      <type name="B类" description="">
+
+      </type>
+      <type name="C类" description="">
+
+      </type>
+      <type name="D类" description="">
+
+      </type>
+      <type name="E类" description="">
+
+      </type>
+    </types>
+  </standard>
+  <standard name="中石化支吊架标准" description="">
+    <types>
+      <type name="支架">
+
+      </type>
+      <type name="托管">
+
+      </type>
+    </types>
+  </standard>
+  <standard name="西北电力支架标准" description="">
+    <types>
+      <type name="三角支架ZJ-2-2">
+
+      </type>
+    </types>
+  </standard>
+</standards>
